@@ -195,7 +195,16 @@
                 <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors">
                     Add Task
                 </button>
-            </div>
+            </div>Reinitialized existing Git repository in /home/azizbek/Desktop/ORM/.git/
+            On branch main
+            Your branch is ahead of 'origin/main' by 1 commit.
+              (use "git push" to publish your local commits)
+            
+            nothing to commit, working tree clean
+            error: remote origin already exists.
+
+            remote: Repository not found.
+            fatal: repository 'https://github.com/Azizbek386/taks.git/' not found
         </form>
         
         
@@ -206,6 +215,7 @@
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
+            
         </div>
     @endif
 
