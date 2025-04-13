@@ -104,10 +104,11 @@ class SiteController extends Controller
      */
     public function update(TaskUpdateRequest $request, string $id)
 {
-    
+
     $task = Task::findOrFail($id); // Taskni ID bo'yicha topish
 
     // Yangi rasm yuklanayotganini teksh
+    
     // irish
     if ($request->hasFile('image')) {
         // Eski rasmni o'chirish
