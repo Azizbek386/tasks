@@ -25,5 +25,6 @@ class UserLoginRequest extends FormRequest
             'email' => 'required|email|exists:users,email', // email kerakli, to'g'ri formatda va userlar jadvalidan olinishi kerak
             'password' => 'required|string|min:8', // password kerakli, minimal uzunligi 8 ta belgidan iborat bo'lishi kerak
         ];
+        
     }
 }
