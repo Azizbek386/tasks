@@ -35,7 +35,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('tasks', SiteController::class)->names('tasks');
+    Route::resource('tasks', TaskController::class)->names('tasks');
     Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
   
 });

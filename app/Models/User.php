@@ -17,13 +17,12 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'first_name',
-        'last_name',
-        'email',
-        'password',
-        'confirm-password',
-    ];
+    protected $fillable = ['path'];
+
+    public function imageable()
+    {
+        return $this->morphTo();
+    }
 
 
     

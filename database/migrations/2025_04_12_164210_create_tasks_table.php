@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('task_name');
             $table->enum('priority', ['High', 'Medium', 'Low']);
             $table->date('due_date');
-            $table->enum('status', ['In Progress', 'Completed', 'Not Started']);
+            $table->enum('status', ['in_progress', 'completed', 'not_started'])->default('not_started');
+
             $table->text('description')->nullable(); 
             $table->string('image')->nullable(); 
             $table->timestamps();

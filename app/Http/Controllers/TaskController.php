@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\TaskStoreRequest;
-use App\Http\Requests\TaskUpdateRequest;
 use Log;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use App\Http\Requests\TaskStoreRequest;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\TaskUpdateRequest;
 
-class SiteController extends Controller
+class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -37,7 +38,7 @@ class SiteController extends Controller
     
         $tasks = $query->latest()->paginate(10); // sahifalash
     
-        return view('task_crud.index', compact('totalTasks', 'completedTasks', 'inProgressTasks', 'tasks'));
+        return view('tasks.index', compact('totalTasks', 'completedTasks', 'inProgressTasks', 'tasks'));
     }
     
     /**
@@ -45,7 +46,7 @@ class SiteController extends Controller
      */
     public function create()
     {   
-        return view('task_crud.create'); // Vazifa yaratish formasi
+        return view('tasks.create'); // Vazifa yaratish formasi
     }
 
     /**
